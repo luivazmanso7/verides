@@ -10,4 +10,7 @@ def contribuir(request):
 def inscricao(request):
     return render(request,'inscricao.html')
 
+def doacoes(request):
+    return render(request,'doacoes.html')
+
 

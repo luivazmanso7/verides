@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Doações</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Contribua com Nossa Causa</h1>
+    <p>Sua doação ajuda a manter o projeto em funcionamento.</p>
+    
+    <!-- Botão de Doação com um Link para Pagamentos -->
+    <a href="https://www.paypal.com/doar?hosted_button_id=SEU_CODIGO" target="_blank">
+        <button>Doar via PayPal</button>
+    </a>
+    
+    <!-- Ou adicione outras opções como PIX -->
+    <h3>Doação via PIX</h3>
+    <p>Chave PIX: SEU_EMAIL_OU_TELEFONE</p>
+</body>
+</html>
