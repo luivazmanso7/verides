@@ -35,8 +35,15 @@ O Verides foi desenvolvido com as seguintes tecnologias:
 - Rodrigo Tenório (rblt@cesar.school)
 - Davi Dimitri (ddbm@cesar.school)
 - Rafael Arcoverde (rasc@cesar.school)
-- Joao Marcelo (
-- Marcelo Henrique (
-- Henrique (
+- Joao Marcelo (jmtpm@cesar.school)
+- Marcelo Henrique (mhbp@cesar.school)
+- Henrique (ihtc@cesar.school)
 - Victor Burle (vjsb@cesar.school)
 - Davi Cordeiro (dcf@cesar.school)
+
+
+<li>
+    <a  href="https://youtu.be/337N2ereM58"
+      >Link do Screencast</a
+    >
+
