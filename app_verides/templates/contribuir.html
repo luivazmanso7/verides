@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Doações</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">inicio</a></li>
+                <li><a href="#">sobre nós</a></li>
+                <li><a href="{% url 'contribuir' %}">contribuir</a></li> 
+                <li><a href="#">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section">
+                <h2>faça sua doações</h2>
+                <button>clique aqui</button>
+            </div>
+            <div class="section">
+                <h2>inscrição</h2>
+                <li><a href="{% url 'inscricao' %}">inscrição</a></li>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>redes sociais: xxxx</p>
+    </footer>
+</body>
+</html>

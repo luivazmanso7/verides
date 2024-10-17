@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">inicio</a></li>
+                <li><a href="#sobre">sobre nos</a></li>
+                <li><a href="{% url 'contribuir' %}">contribuir</a></li>
+                <li><a href="#contato">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>conheça nosso<br>projeto e<br>produtos</h1>
+            <button class="btn-produtos">nossos produtos</button>
+        </section>
+    </main>
+    <footer>
+        <p>redes sociais: xxxx</p>
+    </footer>
+</body>
+
