@@ -24,12 +24,12 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r Verides/requirements.txt
+        run: pip install -r Veridess/requirements.txt
 
       - name: Cleaning testing files
         run: |
-          cd Verides/
-          rm db.sqlite3
+          cd Veridess/
+          rm -f db.sqlite3
           rm .env
           cd ..
         
@@ -37,10 +37,10 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-          cd Verides/
+          cd Veridess/
           zip release.zip ./* -r
           cd ..
-          mv Verides/release.zip .
+          mv Veridess/release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
