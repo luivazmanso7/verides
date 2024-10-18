@@ -60,3 +60,7 @@ O Verides foi desenvolvido com as seguintes tecnologias:
     <a  href="https://www.figma.com/design/2LlGkX0xLCGfbEJURhnb9z/Verides?node-id=0-1&node-type=canvas&t=CCy4xvRwaeN6yE9y-0"
       >Link do Prototipo de baixa</a
     > 
+## Azure
+<li>
+    https://verides-bkfeawbha8bsbxaw.brazilsouth-01.azurewebsites.net/
+</li>
