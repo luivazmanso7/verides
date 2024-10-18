@@ -8,16 +8,36 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Contribua com Nossa Causa</h1>
-    <p>Sua doação ajuda a manter o projeto em funcionamento.</p>
-    
-    <!-- Botão de Doação com um Link para Pagamentos -->
-    <a href="https://www.paypal.com/doar?hosted_button_id=SEU_CODIGO" target="_blank">
-        <button>Doar via PayPal</button>
-    </a>
-    
-    <!-- Ou adicione outras opções como PIX -->
-    <h3>Doação via PIX</h3>
-    <p>Chave PIX: SEU_EMAIL_OU_TELEFONE</p>
+    <header>
+        <div class="logo">
+        <img src="{% static 'fotos\logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre nós</a></li>
+                <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contribua com Nossa Causa</h1>
+        <p>Sua doação ajuda a manter o projeto em funcionamento.</p>
+        
+        <!-- Botão de Doação com um Link para Pagamentos -->
+        <a href="https://www.paypal.com/doar?hosted_button_id=SEU_CODIGO" target="_blank">
+            <button>Doar via PayPal</button>
+        </a>
+        
+        <!-- Ou adicione outras opções como PIX -->
+        <h3>Doação via PIX</h3>
+        <p>Chave PIX: SEU_EMAIL_OU_TELEFONE</p>
+        </section>
+    </main>
+    <footer>
+        <p>redes sociais: xxxx</p>
+    </footer>
 </body>
 </html>
