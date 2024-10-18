@@ -9,13 +9,15 @@
 </head>
 <body>
     <header>
-        <div class="logo">LOGO</div>
+        <div class="logo">
+            <img src="{% static 'fotos\logo.png' %}" alt="Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">inicio</a></li>
-                <li><a href="#">sobre nós</a></li>
-                <li><a href="{% url 'contribuir' %}">contribuir</a></li> 
-                <li><a href="#">contato</a></li>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre nós</a></li>
+                <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
             </ul>
         </nav>
     </header>
