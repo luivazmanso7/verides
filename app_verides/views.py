@@ -13,4 +13,11 @@ def inscricao(request):
 def doacoes(request):
     return render(request,'doacoes.html')
 
+def catalogo(request):
+    return render(request,'catalogo.html')
 
+def sobre(request):
+    return render(request, 'sobre.html')
+
+def contato(request):
+    return render(request, 'contato.html')
