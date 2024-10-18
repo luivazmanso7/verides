@@ -45,5 +45,14 @@ O Verides foi desenvolvido com as seguintes tecnologias:
 <li>
     <a  href="https://youtu.be/337N2ereM58"
       >Link do Screencast do prototipo de baixa</a
-    >
-
+    > 
+## Diagrama de atividade
+<li>
+    <a  href="https://lucid.app/lucidchart/632ed730-3db3-49e5-83eb-c1153e70f213/edit?viewport_loc=-410%2C-1206%2C1902%2C2694%2C0_0&invitationId=inv_429d7c32-6f27-4100-b68a-892b44706114"
+      >Link do Diagrama de atvidade</a
+    > 
+## Prototipo de baixa
+<li>
+    <a  href="https://www.figma.com/design/2LlGkX0xLCGfbEJURhnb9z/Verides?node-id=0-1&node-type=canvas&t=CCy4xvRwaeN6yE9y-0"
+      >Link do Prototipo de baixa</a
+    > 
