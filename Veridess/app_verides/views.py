@@ -21,3 +21,6 @@ def sobre(request):
 
 def contato(request):
     return render(request, 'contato.html')
+
+def sobrenos(request):
+    return render(request, 'sobrenos.html')

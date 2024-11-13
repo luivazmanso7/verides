@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'fotos/logo.png' %}" alt="Logo da ONG">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Início</a></li>
+                <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Quem Somos</h2>
+        <p>Somos uma organização sem fins lucrativos comprometida em promover mudanças positivas e sustentáveis na nossa comunidade. Nossa equipe é formada por profissionais e voluntários dedicados a criar um impacto social, unindo esforços para apoiar causas sociais e ajudar aqueles que mais precisam.</p>
+    </section>
+
+    <section>
+        <h2>Nossa Missão</h2>
+        <p>Nossa missão é transformar vidas e fortalecer comunidades por meio de projetos que promovem educação, inclusão social, e sustentabilidade. Buscamos inspirar pessoas a contribuírem e se engajarem em ações que promovam um futuro mais justo e igualitário.</p>
+    </section>
+
+    <section>
+        <h2>Nossa Visão</h2>
+        <p>Sonhamos com um mundo onde cada pessoa tenha acesso a oportunidades, direitos e dignidade. Nossa visão é ser uma referência em impacto social, mobilizando recursos e voluntários para construir uma sociedade mais humana e acolhedora.</p>
+    </section>
+
+    <section>
+        <h2>Valores</h2>
+        <ul>
+            <li><strong>Empatia:</strong> Colocamos as pessoas no centro de nossas ações.</li>
+            <li><strong>Transparência:</strong> Atuamos com integridade e responsabilidade.</li>
+            <li><strong>Colaboração:</strong> Acreditamos no poder da união e do trabalho em equipe.</li>
+            <li><strong>Sustentabilidade:</strong> Promovemos práticas que respeitam o meio ambiente e o futuro.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nome da ONG. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

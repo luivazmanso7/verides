@@ -4,31 +4,48 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Contato</title>
+    <title>Página Inicial</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="{% static 'fotos\logo.png' %}" alt="Logo">
+            <img src="{% static 'fotos/logo.png' %}" alt="Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'sobre' %}">Sobre nós</a></li>
+                <li><a href="{% url 'home' %}">Início</a></li>
+                <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
                 <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <h1>Para entrar entrar em contato ligue para :</h1>
-    
-        <p> (81)XXXXXXXXXXX</p>
-    </main>
+
+    <section>
+        <div class="contact-container">
+            <h1>Entre em contato conosco!</h1>
+            <p>Gostaria de saber mais sobre nossa ONG, se voluntariar, contribuir com uma doação ou apoiar de outra forma? Envie sua mensagem e retornaremos em breve!</p>
+            
+            <div class="contact-info">
+                <p><strong>Email:</strong> hello@empresa.com.br</p>
+                <p><strong>Endereço:</strong> R. Exemplo, 123, Bairro, Cidade, Estado</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" id="name" name="name" placeholder="Seu nome completo*" required>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail*" required>
+                <input type="text" id="subject" name="subject" placeholder="Assunto (Ex: Voluntariado, Doação, Parceria)*" required>
+                <textarea id="message" name="message" placeholder="Como podemos ajudar você? Escreva sua mensagem aqui..." rows="4" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
 </body>
-<footer>
-    <p>redes sociais: xxxx</p>
-</footer>
 </html>
