@@ -414,26 +414,49 @@ footer {
 /* ===========================================
    Inscrição
    =========================================== */
-   .inscricao-section {
-    background-color: #203a30;
-    color: white;
-    padding: 40px;
+.inscricao-section {
+    padding: 50px 20px; 
+    background-color: #f9f9f9;
     text-align: center;
 }
 
 .inscricao-section h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: white;
+    background-color: #203a30;
+    padding: 10px 0;
 }
 
 .inscricao-section p {
     margin-bottom: 20px;
     font-size: 1.2rem;
+    color: white;
 }
 
-form {
-    max-width: 500px;
+.header-separator {
+    border: 0;
+    height: 1px;
+    background-color: #ccc; 
+    margin: 10px 0;
+}
+
+.form-container {
+    background-color: #203a30;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
     margin: 0 auto;
+}
+
+.form-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -442,6 +465,7 @@ form {
 form label {
     text-align: left;
     font-weight: bold;
+    color: #ffffff;
 }
 
 form input, form select, form textarea {
@@ -452,8 +476,7 @@ form input, form select, form textarea {
 }
 
 form .btn-submit {
-    background-color: #1abc9c;
-    color: white;
+    background-color: #1abc9c; 
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -462,4 +485,30 @@ form .btn-submit {
 
 form .btn-submit:hover {
     background-color: #16a085;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #000000;
+    color: white;
+}
+
+.footer-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #1abc9c; 
+}
+
+.footer-copy {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #444; 
 }

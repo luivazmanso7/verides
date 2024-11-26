@@ -11,4 +11,5 @@ urlpatterns = [
     path('catalogo/', views.catalogo, name='catalogo'),
     path('contato/', views.contato, name='contato'),
     path('sobrenos/', views.sobrenos, name='sobrenos'),
+    path('confirmacao/', views.confirmacao, name='pagina_de_confirmacao'),
 ]

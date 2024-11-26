@@ -50,6 +50,9 @@ def inscricao(request):
         destinatario = 'rblt@cesar.school'
         send_mail(assunto, mensagem, 'rblt@cesar.school', [destinatario])
 
-        return HttpResponse("Inscrição enviada com sucesso!")
+        return redirect('pagina_de_confirmacao')
 
     return render(request, 'inscricao.html')
+
+def confirmacao(request):
+    return render(request, 'confirmacao.html')
