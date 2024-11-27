@@ -512,3 +512,87 @@ form .btn-submit:hover {
     font-size: 0.9rem;
     border-top: 1px solid #444; 
 }
+/* ===========================================
+   Catalogo
+   =========================================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card img {
+    max-width: 50%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.product-card h3, .product-card p {
+    margin: 3px 0;
+    color: #333;
+}
+
+.product-card .btn {
+    margin-top: px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.product-card .btn:hover {
+    background-color: #16a085;
+}
+
+.filter-section {
+    padding: 20px;
+    background-color: #203a30;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filter-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-section input, .filter-section select, .filter-section button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.filter-section input {
+    flex: 1;
+}
+
+.filter-section button {
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-section button:hover {
+    background-color: #16a085;
+}

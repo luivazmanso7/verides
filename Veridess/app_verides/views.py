@@ -56,3 +56,28 @@ def inscricao(request):
 
 def confirmacao(request):
     return render(request, 'confirmacao.html')
+
+def catalogo(request):
+    produtos = [
+        {'id': 1, 'nome': 'Boneco Aventureiro', 'preco': 59.90, 'descricao': 'Boneco divertido e educativo.', 'data': '2024-11-01'},
+        {'id': 2, 'nome': 'Boneco Felpudo', 'preco': 79.90, 'descricao': 'Boneco felpudo e macio.', 'data': '2024-11-02'},
+        {'id': 3, 'nome': 'Boneco Aventureiro', 'preco': 65.00, 'descricao': 'Boneco ideal para aventuras.', 'data': '2024-11-03'},
+        {'id': 4, 'nome': 'Boneco Criativo', 'preco': 45.99, 'descricao': 'Boneco criativo e inspirador.', 'data': '2024-11-04'},
+        {'id': 5, 'nome': 'Boneco Clássico', 'preco': 60.00, 'descricao': 'Boneco de design clássico.', 'data': '2024-11-05'},
+        {'id': 6, 'nome': 'Boneco Colorido', 'preco': 64.00, 'descricao': 'Boneco com cores vibrantes.', 'data': '2024-11-06'},
+        {'id': 7, 'nome': 'Boneco Divertido', 'preco': 69.99, 'descricao': 'Boneco para horas de diversão.', 'data': '2024-11-07'},
+        {'id': 8, 'nome': 'Boneco Fofinho', 'preco': 55.90, 'descricao': 'Boneco macio e fofinho.', 'data': '2024-11-08'},
+    ]
+
+    nome = request.GET.get('nome', '').strip().lower()
+    ordenacao = request.GET.get('ordenacao', '')
+
+    if nome:
+        produtos = [p for p in produtos if nome in p['nome'].lower()]
+
+    if ordenacao == 'preco':
+        produtos = sorted(produtos, key=lambda x: x['preco'])
+    elif ordenacao == 'recentes':
+        produtos = sorted(produtos, key=lambda x: x['data'], reverse=True)
+
+    return render(request, 'catalogo.html', {'produtos': produtos})
