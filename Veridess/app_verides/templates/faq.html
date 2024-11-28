@@ -34,7 +34,7 @@
             <h1 class="faq-title">Perguntas Frequentes</h1>
             {% for faq in faqs %}
             <div class="faq-item">
-                <p class="faq-question" onclick="toggleAnswer({{ forloop.counter } )">
+                <p class="faq-question" onclick="toggleAnswer({{ forloop.counter }});">
                     {{ faq.question }}
                     <i class="bi bi-chevron-down"></i>
                 </p>
@@ -45,6 +45,23 @@
             {% endfor %}
         </div>
     </main>
+    <main>
+        <div class="faq-container">
+            <h1 class="faq-title">Perguntas Frequentes</h1>
+            {% for faq in faqs %}
+            <div class="faq-item">
+                <p class="faq-question" onclick="toggleAnswer({{ forloop.counter }});">
+                    {{ faq.question }}
+                    <i class="bi bi-chevron-down"></i>
+                </p>
+                <p id="answer-{{ forloop.counter }}" class="faq-answer">
+                    {{ faq.answer }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-about">
@@ -61,6 +78,10 @@
                     <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
                 </ul>
             </div>
+
+
+
+
             <div class="footer-contact">
                 <h3>Contato</h3>
                 <div class="footer-icons">
