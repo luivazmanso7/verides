@@ -121,35 +121,64 @@ nav a:hover {
 }
 
 /* Cards Section */
-.cards {
+.product-list {
     padding: 40px;
-    text-align: center;
+    background-color: #ffffff;
 }
 
-.cards-container {
-    display: flex;
-    justify-content: space-between;
+.product-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
-
-.card {
-    background-color: #2d3d35;
-    border-radius: 8px;
     padding: 20px;
+    background-color: #ffffff;
+}
+
+.product-card {
+    background-color: #f9f9f9; /* Cartões com fundo claro */
+    border: 1px solid #ddd;
+    border-radius: 8px;
     text-align: center;
-    width: 30%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 5px;
+.product-card img {
+    max-width: 80%; /* Ajuste do tamanho das imagens */
+    border-radius: 8px;
     margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555555;
+}
+
+.product-card .btn {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-card .btn:hover {
+    background-color: #16a085;
 }
 
 /* ===========================================

@@ -11,5 +11,6 @@ urlpatterns = [
     path('catalogo/', views.catalogo, name='catalogo'),
     path('contato/', views.contato, name='contato'),
     path('sobrenos/', views.sobrenos, name='sobrenos'),
+    path('produto/<int:id>/', views.produto_detalhes, name='produto_detalhes'),
     path('confirmacao/', views.confirmacao, name='pagina_de_confirmacao'),
 ]
