@@ -34,7 +34,7 @@
             <h1 class="faq-title">Perguntas Frequentes</h1>
             {% for faq in faqs %}
             <div class="faq-item">
-                <p class="faq-question" onclick="toggleAnswer({{ forloop.counter }})">
+                <p class="faq-question" onclick="toggleAnswer({{ forloop.counter } )">
                     {{ faq.question }}
                     <i class="bi bi-chevron-down"></i>
                 </p>
