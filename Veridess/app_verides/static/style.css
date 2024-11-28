@@ -780,46 +780,80 @@ form .btn-submit:hover {
 /* ===========================================
    SOBRE NÓS PAGE
    =========================================== */
-/* Card Section */
+
+/* Configuração geral da seção de cards */
 .card-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 20px;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex; /* Define um layout flexível para os elementos filhos */
+    flex-direction: column; /* Alinha os cards verticalmente (em coluna) */
+    gap: 40px; /* Espaçamento entre os cards */
+    padding: 40px 20px; /* Adiciona espaço interno ao redor da seção */
+    background-color: #f5f5f5; /* Define a cor de fundo da seção */
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 2000px; /* Limita a largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção horizontalmente na página */
 }
 
+/* Configuração dos cards individuais */
 .card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    display: flex; /* Define um layout flexível para os elementos dentro do card */
+    align-items: center; /* Centraliza verticalmente os itens no card */
+    gap: 20px; /* Espaçamento entre os elementos dentro do card (imagem e texto) */
+    background-color: white; /* Define a cor de fundo do card */
+    padding: 20px; /* Adiciona espaço interno ao redor do conteúdo do card */
+    border-radius: 10px; /* Arredonda os cantos do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar destaque ao card */
+    width: 100%; /* Faz o card ocupar toda a largura do container */
+    max-width: 2000px; /* Limita a largura máxima da seção */
+    height: auto; /* Ajusta a altura automaticamente com base no conteúdo */
 }
 
+/* Configuração da imagem dentro do card */
 .card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 300px; /* Define uma largura fixa para a imagem */
+    border-radius: 8px; /* Arredonda os cantos da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha caso o espaço fique reduzido */
+}
+
+/* Configuração do conteúdo textual dentro do card */
+.card-content {
+    flex: 1; /* Faz o conteúdo textual ocupar o espaço restante no card */
+    padding: 0 10px; /* Adiciona espaçamento interno horizontal */
+}
+
+.card-content h4 {
+    font-size: 1rem; /* Define o tamanho da fonte do subtítulo */
+    color: #8c8c8c; /* Define a cor do texto como cinza claro */
+    text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do subtítulo */
 }
 
 .card-content h2 {
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: #333;
+    font-size: 2rem; /* Define o tamanho da fonte do título */
+    color: #333; /* Define a cor do texto como preto suave */
+    margin-bottom: 15px; /* Adiciona espaço abaixo do título */
+    font-weight: bold; /* Define o texto como negrito */
 }
 
 .card-content p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1rem; /* Define o tamanho da fonte do parágrafo */
+    color: #555; /* Define a cor do texto como cinza médio */
+    line-height: 1.6; /* Define o espaçamento entre as linhas do texto */
+}
+
+/* Configuração de alinhamento padrão dos cards */
+.card-left {
+    flex-direction: row; /* Alinha os elementos do card com a imagem à esquerda */
+}
+
+/* Configuração de alinhamento inverso dos cards */
+.card-right {
+    flex-direction: row-reverse; /* Alinha os elementos do card com a imagem à direita */
 }
 
 /* Juntos Section */
 .juntos-section {
-    background-color: #1abc9c;
-    color: white;
+    background-color: #171E13;
+    color: #ffffff;
     text-align: center;
     padding: 40px 20px;
 }
@@ -848,7 +882,7 @@ form .btn-submit:hover {
 }
 
 .value-box {
-    background-color: #f4f4f4;
+    background-color: #dd1a1a;
     padding: 20px;
     border-radius: 8px;
     width: 250px;
@@ -865,7 +899,7 @@ form .btn-submit:hover {
 
 /* Team Section */
 .team-section {
-    background-color: #203a30;
+    background-color: #023108;
     color: white;
     text-align: center;
     padding: 40px 20px;
