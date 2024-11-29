@@ -2,7 +2,7 @@
 Bem-vindo ao repositório do Verides, um projeto dedicado a desenvolver uma landing page para uma instituição de caridade. Nosso objetivo é criar uma página web simples e impactante que apresente a missão, os projetos e as formas de doação, oferecendo uma experiência acessível para os visitantes e futuros apoiadores da instituição.
 
 ## Objetivo do Projeto
-O Verides foi criado com o propósito de:
+O Verides foi criado com o propósito de:.
 
 - Fornecer uma plataforma online para destacar o trabalho da instituição de caridade.
 
