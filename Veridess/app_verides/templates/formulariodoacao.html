@@ -4,14 +4,15 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Verides</title>
+    <title>Verides</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <img src="{% static 'fotos/logo.png' %}" alt="Logo Verides">
+            <img src="{% static 'fotos/logo.png' %}" alt="Logo da Verides">
         </div>
         <nav>
             <ul>
@@ -24,22 +25,41 @@
         </nav>
     </header>
 
+    <!-- Seção de Doações -->
+    <main class="donation-section">
+        <h1>Doações de Materiais</h1>
+        <h2>COMO FUNCIONA E PARA QUE SERVE</h2>
+        <div class="donation-container">
+            <div class="donation-content">
+                <img src="{% static 'fotos/sdsd.png' %}" alt="Imagem de materiais recicláveis">
+                <p>
+                    Podem ser entregues através dos correios. Para isso, entre em contato conosco pelo formulário abaixo.
+                </p>
+            </div>
+            <div class="donation-content">
+                <img src="{% static 'fotos/8b6c656e80b8f78d2cc944693e30eada.png' %}" alt="Imagem de reciclagem">
+                <p>
+                    Materiais doados precisam ser totalmente úteis para reciclagem, sendo transformados em brinquedos novos para consumo.
+                </p>
+            </div>
+        </div>
 
-    <main>
-        <section class="product-details">
-            <img src="{% static 'fotos/boneco3.jpg' %}" alt="Boneco Aventureiro">
-            <h1>Boneco Aventureiro</h1>
-            <p>Preço: R$ 65,00</p>
-            <p>Descrição: Boneco ideal para crianças que adoram aventuras e explorar o mundo.</p>
-        </section>
+        <!-- Botão de Formulário -->
+        <a href="{% url 'pergmaterial' %}" class="donate-button">
+            FORMULÁRIO DE DOAÇÃO
+        </a>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <div class="footer-container">
+            <!-- Sobre a Verides -->
             <div class="footer-about">
                 <h3>Verides</h3>
                 <p>Abrindo portas para iniciativas socioambientais no mundo digital.</p>
             </div>
+
+            <!-- Menu do Rodapé -->
             <div class="footer-menu">
                 <h3>Menu</h3>
                 <ul>
@@ -50,11 +70,13 @@
                     <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
                 </ul>
             </div>
+
+            <!-- Contato no Rodapé -->
             <div class="footer-contact">
                 <h3>Contato</h3>
                 <div class="footer-icons">
                     <i class="bi bi-telephone"></i>
-                    <p>+55 081 99449-8361</p>
+                    <p>+55 81 99449-8361</p>
                 </div>
                 <div class="footer-icons">
                     <i class="bi bi-envelope-arrow-up"></i>

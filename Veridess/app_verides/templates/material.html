@@ -4,14 +4,14 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Verides</title>
+    <title>Verides</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="{% static 'fotos/logo.png' %}" alt="Logo Verides">
+            <img src="{% static 'fotos/logo.png' %}" alt="Logo">
         </div>
         <nav>
             <ul>
@@ -23,17 +23,33 @@
             </ul>
         </nav>
     </header>
-
-
-    <main>
-        <section class="product-details">
-            <img src="{% static 'fotos/boneco3.jpg' %}" alt="Boneco Aventureiro">
-            <h1>Boneco Aventureiro</h1>
-            <p>Preço: R$ 65,00</p>
-            <p>Descrição: Boneco ideal para crianças que adoram aventuras e explorar o mundo.</p>
-        </section>
-    </main>
-
+    <main class="materials-section">
+        <h2>Materiais</h2>
+        <div class="steps-container">
+            <div class="step">
+                <img src="{% static 'fotos/cabide.png' %}" alt="Cabide">
+                <h3>PASSO 1</h3>
+                <p>Reúna o seu equipamento elegível</p>
+                <span>Aceitamos a maioria do material que sejam totalmente funcionais e estejam em boas condições.</span>
+            </div>
+            <div class="step">
+                <img src="{% static 'fotos/lixo.png' %}" alt="Folha no lixo">
+                <h3>PASSO 2</h3>
+                <p>Envie-nos os seus artigos</p>
+                <span>Troque o seu equipamento pelo correio. Basta imprimir a etiqueta de envio.</span>
+            </div>
+            <div class="step">
+                <img src="{% static 'fotos/dinheiro.png' %}" alt="Créditos">
+                <h3>PASSO 3</h3>
+                <p>Obtenha créditos</p>
+                <span>Por cada peça de roupa qualificada, receberá crédito para usar na loja.</span>
+            </div>
+        </div>
+        <a href="{% url 'formulariodoacao' %}" class="donate-button">
+            DOAÇÃO DE MATERIAIS
+        </a>     
+    <div class="contribuir3">
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-about">
@@ -54,7 +70,7 @@
                 <h3>Contato</h3>
                 <div class="footer-icons">
                     <i class="bi bi-telephone"></i>
-                    <p>+55 081 99449-8361</p>
+                    <p>+55 81 99449-8361</p>
                 </div>
                 <div class="footer-icons">
                     <i class="bi bi-envelope-arrow-up"></i>
@@ -68,5 +84,7 @@
         </div>
         <p class="footer-copy">Política de Privacidade | © 2024 Verides - Criar School. Todos os direitos reservados.</p>
     </footer>
+</body>
+</html>
 </body>
 </html>

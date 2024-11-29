@@ -1,33 +1,11 @@
-
-from django.shortcuts import render,redirect
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail
-from django.http import HttpResponse
-
 
 def home(request):
-    return render(request,'index.html')
+    return render(request, 'index.html')
 
 def contribuir(request):
-    return render(request,'contribuir.html')
-
-def inscricao(request):
-    return render(request,'inscricao.html')
-
-def doacoes(request):
-    return render(request,'doacoes.html')
-
-def catalogo(request):
-    return render(request,'catalogo.html')
-
-def sobre(request):
-    return render(request, 'sobre.html')
-
-def contato(request):
-    return render(request, 'contato.html')
-
-def sobrenos(request):
-    return render(request, 'sobrenos.html')
+    return render(request, 'contribuir.html')
 
 def inscricao(request):
     if request.method == 'POST':
@@ -50,21 +28,15 @@ def inscricao(request):
             f"Disponibilidade: {disponibilidade}"
         )
         destinatario = 'rblt@cesar.school'
-        send_mail(assunto, mensagem, 'rblt@cesar.school', [destinatario])
+        remetente = 'rblt@cesar.school'
+        send_mail(assunto, mensagem, remetente, [destinatario])
 
-        return redirect('confirmacao.html')
+        return redirect('pagina_de_confirmacao')
 
     return render(request, 'inscricao.html')
 
-def confirmacao(request):
-    return render(request, 'confirmacao.html')
-
-
-def home(request):
-    return render(request, 'index.html')
-
-def contribuir(request):
-    return render(request, 'contribuir.html')
+def doacoes(request):
+    return render(request, 'doacoes.html')
 
 def catalogo(request):
     produtos = [
@@ -94,79 +66,8 @@ def catalogo(request):
 def produto_detalhes(request, id):
     return render(request, f'produto{id}.html')
 
-
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.core.mail import send_mail
-from django.http import HttpResponse
-
-def home(request):
-    return render(request,'index.html')
-
-def contribuir(request):
-    return render(request,'contribuir.html')
-
-def inscricao(request):
-    return render(request,'inscricao.html')
-
-def doacoes(request):
-    return render(request,'doacoes.html')
-
-def catalogo(request):
-    return render(request,'catalogo.html')
-
 def sobre(request):
     return render(request, 'sobre.html')
-
-def contato(request):
-    return render(request, 'contato.html')
-
-def sobrenos(request):
-    return render(request, 'sobrenos.html')
-
-def inscricao(request):
-    if request.method == 'POST':
-        nome = request.POST['nome']
-        sexo = request.POST['sexo']
-        idade = request.POST['idade']
-        telefone = request.POST['telefone']
-        email = request.POST['email']
-        sobre_voce = request.POST['sobre_voce']
-        disponibilidade = request.POST['disponibilidade']
-
-        assunto = f"Nova Inscrição de Voluntário: {nome}"
-        mensagem = (
-            f"Nome Completo: {nome}\n"
-            f"Sexo: {sexo}\n"
-            f"Idade: {idade}\n"
-            f"Telefone: {telefone}\n"
-            f"E-mail: {email}\n"
-            f"Fale sobre você: {sobre_voce}\n"
-            f"Disponibilidade: {disponibilidade}"
-        )
-        destinatario = 'rblt@cesar.school'
-        send_mail(assunto, mensagem, 'rblt@cesar.school', [destinatario])
-
-        return redirect('pagina_de_confirmacao')
-
-    return render(request, 'inscricao.html')
-
-def confirmacao(request):
-    return render(request, 'confirmacao.html')
-
-
-def faq_page(request):
-    faqs = [
-        {"question": "Como faço para virar um colaborador?", "answer": "Acesse a pagina Inscrição e clique no botão para se voluntariar."},
-        {"question": "Como faço para entrar em contato?", "answer": "Use a opção Contato no Menu Inicial."},
-        {"question": "Quais métodos de pagamento são aceitos nas doaçoes?", "answer": "Aceitamos Paypal, ou Pix para Danielle."},
-    ]
-    second_faqs = [
-        {"question": "Quais materiais são usados na confecção dos bonecos?", "answer": "Materiais 100% reciclados."},
-        {"question": "Que tipo de mão de obra é utilizada?", "answer": "Nossos colaboradores são apenas mulheres em situação de vulnerabilidade que necessitem de ajuda."},
-        {"question": "Qual o nome das redes sociais da marca?", "answer": "fabricas_de_ideias"},
-    ]
-    return render(request, 'faq.html', {'faqs': faqs, 'second_faqs': second_faqs})
 
 def contato(request):
     if request.method == 'POST':
@@ -182,13 +83,70 @@ def contato(request):
             f"Mensagem:\n{message}"
         )
         destinatario = 'rblt@cesar.school'
-
-        send_mail(assunto, mensagem, 'rblt@cesar.school', [destinatario])
+        remetente = 'rblt@cesar.school'
+        send_mail(assunto, mensagem, remetente, [destinatario])
 
         return redirect('pagina_de_confirmacao')
 
     return render(request, 'contato.html')
 
+def sobrenos(request):
+    return render(request, 'sobrenos.html')
 
+def material(request):
+    return render(request, 'material.html')
 
+def formulariodoacao(request):
+    return render(request, 'formulariodoacao.html')
 
+def pergmaterial(request):
+    return render(request, 'pergmaterial.html')
+
+def processar_doacao(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        email = request.POST.get('email')
+        telefone = request.POST.get('telefone')
+        item = request.POST.get('item')
+        cidade = request.POST.get('cidade')
+        cep = request.POST.get('cep')
+        endereco = request.POST.get('endereco')
+        outro_item = request.POST.get('outro_item', 'N/A')
+        mensagem_texto = request.POST.get('mensagem')
+
+        assunto = f"Nova Doação de Material de {nome}"
+        mensagem = (
+            f"Nome: {nome}\n"
+            f"E-mail: {email}\n"
+            f"Telefone: {telefone}\n"
+            f"Item para doação: {item}\n"
+            f"Cidade/Estado: {cidade}\n"
+            f"CEP: {cep}\n"
+            f"Endereço: {endereco}\n"
+            f"Outro item para doação: {outro_item}\n"
+            f"Mensagem:\n{mensagem_texto}"
+        )
+        destinatario = 'rblt@cesar.school'
+        remetente = 'rblt@cesar.school'
+        send_mail(assunto, mensagem, remetente, [destinatario])
+
+        return redirect('pagina_de_confirmacao')
+
+    else:
+        return redirect('pergmaterial')
+
+def confirmacao(request):
+    return render(request, 'confirmacao.html')
+
+def faq_page(request):
+    faqs = [
+        {"question": "Como faço para virar um colaborador?", "answer": "Acesse a página Inscrição e clique no botão para se voluntariar."},
+        {"question": "Como faço para entrar em contato?", "answer": "Use a opção Contato no Menu Inicial."},
+        {"question": "Quais métodos de pagamento são aceitos nas doações?", "answer": "Aceitamos Paypal ou Pix para Danielle."},
+    ]
+    second_faqs = [
+        {"question": "Quais materiais são usados na confecção dos bonecos?", "answer": "Materiais 100% reciclados."},
+        {"question": "Que tipo de mão de obra é utilizada?", "answer": "Nossos colaboradores são apenas mulheres em situação de vulnerabilidade que necessitam de ajuda."},
+        {"question": "Qual o nome das redes sociais da marca?", "answer": "fabricas_de_ideias"},
+    ]
+    return render(request, 'faq.html', {'faqs': faqs, 'second_faqs': second_faqs})

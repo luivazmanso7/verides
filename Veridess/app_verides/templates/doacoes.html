@@ -26,28 +26,26 @@
     </header>
 
     <pagamento>
-        <div class="doacao-conteudo">
-            <h1 class="doacao-titulo">Contribua com Nossa Causa</h1>
-            <p class="doacao-texto">Sua doação ajuda a manter o projeto em funcionamento.</p>
-            
-            <a href="https://www.paypal.com/doar?hosted_button_id=SEU_CODIGO" target="_blank">
-                <button class="doacao-botao">Doar via PayPal</button>
-            </a>
-            
-            <h3 class="doacao-subtitulo">Doação via PIX</h3>
-        </div>
-        
-        <div class="pix-conteudo">
-            <h2 class="pix-title">Pague com</h2>
-            <img src="{% static 'fotos/pix.png' %}" alt="PIX Logo" class="pix-logo">
-            <div class="pix-qrcode">
-                <img src="{% static 'fotos/qrcode.png' %}" alt="QR Code" class="qrcode-image">
+        <div class="pagamento">
+            <div class="doacao-conteudo">
+                <h1 class="doacao-titulo">Contribua com Nossa Causa</h1>
+                <p class="doacao-texto">Sua doação ajuda a manter o projeto em funcionamento.</p>
+                <a href="https://www.paypal.com/doar?hosted_button_id=SEU_CODIGO" target="_blank">
+                    <button class="doacao-botao">Doar via PayPal</button>
+                </a>
             </div>
-                <div class="qrcode-placeholder"></div>
-            </div>
-            <p class="pix-instructions">Aponte sua câmera para o QR Code<br>ou use nossa Chave:</p>
-            <div class="pix-key">
-                <p class="doacao-chave">Chave PIX: daniellefabricadeideias@gmail.com</p>
+    
+            <div class="pix-conteudo">
+                <h3 class="doacao-subtitulo">Doação via PIX</h3>
+                <h2 class="pix-title">Pague com</h2>
+                <img src="{% static 'fotos/pix.png' %}" alt="PIX Logo" class="pix-logo">
+                <div class="pix-qrcode">
+                    <img src="{% static 'fotos/qrcode.png' %}" alt="QR Code" class="qrcode-image">
+                </div>
+                <p class="pix-instructions">Aponte sua câmera para o QR Code<br>ou use nossa Chave:</p>
+                <div class="pix-key">
+                    <p class="doacao-chave">Chave PIX: daniellefabricadeideias@gmail.com</p>
+                </div>
             </div>
         </div>
     </pagamento>
