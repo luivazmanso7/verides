@@ -30,7 +30,7 @@
     </header>
     <main>
         <div class="faq-container">
-            <h1 class="faq-title">Perguntas Frequentes - Acordeon 1</h1>
+            <h1 class="faq-title">Perguntas Frequentes </h1>
             {% for faq in faqs %}
             <div class="faq-item">
                 <p class="faq-question" onclick="toggleAnswer('faq1-{{ forloop.counter }}');">
@@ -45,7 +45,7 @@
         </div>
 
         <div class="faq-container">
-            <h1 class="faq-title">Perguntas Frequentes - Acordeon 2</h1>
+            <h1 class="faq-title"> Mais Perguntas </h1>
             {% for faq in second_faqs %}
             <div class="faq-item">
                 <p class="faq-question" onclick="toggleAnswer('faq2-{{ forloop.counter }}');">

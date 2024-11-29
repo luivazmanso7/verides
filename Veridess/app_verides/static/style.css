@@ -908,7 +908,7 @@ form .btn-submit:hover {
 .doacao-chave {
     font-size: 1.2rem; /* Tamanho do texto */
     font-weight: bold; /* Negrito no texto */
-    color: #DADADA; /* Texto cinza claro */
+    color: #ffffff; /* Texto cinza claro */
     text-align: center; /* Centraliza o texto */
     margin-top: 10px; /* Espaço acima do texto */
 }
@@ -919,7 +919,7 @@ form .btn-submit:hover {
     display: flex;
     flex-direction: column; /* Organiza os elementos verticalmente */
     align-items: center; /* Centraliza horizontalmente */
-    padding: 20px;
+    padding: 50px;
     gap: 40px; /* Espaço entre as seções */
 }
 
