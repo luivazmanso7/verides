@@ -1,6 +1,4 @@
-
 from django.urls import path
-from .views import home
 from . import views
 
 urlpatterns = [
@@ -15,8 +13,9 @@ urlpatterns = [
     path('confirmacao/', views.confirmacao, name='pagina_de_confirmacao'),
     path('faq/', views.faq_page, name='faq_page'),
     path('produto/<int:id>/', views.produto_detalhes, name='produto_detalhes'),
+    path('material/', views.material, name='material'),
+    path('formulariodoacao/', views.formulariodoacao, name='formulariodoacao'),
+    path('pergmaterial/', views.pergmaterial, name='pergmaterial'),
+    path('processar_doacao/', views.processar_doacao, name='processar_doacao'),
 ]
-
-
-
 

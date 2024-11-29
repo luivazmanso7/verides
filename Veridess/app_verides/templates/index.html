@@ -4,9 +4,173 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verides</title>
+    <title>Contato - Verides</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #202a25;
+            color: white;
+        }
+
+
+        .hero {
+            background: url("{% static 'fotos/home.png' %}") center/cover no-repeat;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+
+        .projeto {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2d3d35;
+            border-bottom: 2px solid #3b4f42;
+        }
+
+        .projeto-content {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            align-items: center;
+        }
+
+        .projeto-img-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .projeto-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .projeto-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .projeto-text h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #4caf50;
+        }
+
+        .projeto-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #388e3c;
+        }
+
+
+        .cards {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #202a25;
+        }
+
+        .cards h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .cards p {
+            font-size: 1rem;
+            color: #b8c1c0;
+            margin-bottom: 40px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #2d3d35;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            flex: 1;
+            border: 1px solid #3b4f42;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #b8c1c0;
+            margin-bottom: 20px;
+        }
+
+        .btn-card {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-card:hover {
+            background-color: #388e3c;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,24 +188,21 @@
         </nav>
     </header>
     <main>
-        <!-- Hero Section -->
-        <section class="hero" >
-            <div class="overlay"></div>
+        <section class="hero">
             <div class="hero-content">
-                <img src="{% static 'fotos/logo.png' %}" alt="Logo Verides" class="hero-logo">
             </div>
         </section>
 
-        <!-- Projeto Section -->
         <section class="projeto">
-            <h2>Conheça nosso projeto:</h2>
             <div class="projeto-content">
-                <img src="{% static 'fotos/main_force.png' %}" alt="Projeto" class="projeto-img">
+                <div class="projeto-img-container">
+                    <img src="{% static 'fotos/Danielle.jpg' %}" alt="Danielle" class="projeto-img">
+                </div>
                 <div class="projeto-text">
                     <h3>Brinquedos Mangue Town</h3>
                     <p>
                         Empresa dedicada à criação de brinquedos sustentáveis, com o compromisso de educar e divertir
-                        de forma responsável. Nosso produto se baseia no uso de materiais recicláveis e biogradáveis, visando
+                        de forma responsável. Nosso produto se baseia no uso de materiais recicláveis e biodegradáveis, visando
                         reduzir o impacto ambiental. Além disso, estimulamos a criatividade e imaginação das crianças.
                     </p>
                     <a href="{% url 'catalogo' %}" class="btn">Saiba Mais</a>
@@ -49,7 +210,6 @@
             </div>
         </section>
 
-        <!-- Cards Section -->
         <section class="cards">
             <h2>Explore, aprenda e contribua!</h2>
             <p>
@@ -57,21 +217,21 @@
             </p>
             <div class="cards-container">
                 <div class="card">
-                    <img src="{% static 'fotos/leaf_pattern.png' %}" alt="Catálogo">
+                    <img src="{% static 'fotos/card1.png' %}" alt="Catálogo">
                     <h3>Catálogo</h3>
-                    <p>Conheça nossos brinquedos.</p>
+                    <p>Conheça nosso catálogo e se apaixone por nossos brinquedos.</p>
                     <a href="{% url 'catalogo' %}" class="btn-card">Ver Mais</a>
                 </div>
                 <div class="card">
-                    <img src="{% static 'fotos/solid_dark_green.png' %}" alt="Faça Parte">
-                    <h3>Faça Parte</h3>
-                    <p>Entre nessa iniciativa com a gente!</p>
+                    <img src="{% static 'fotos/card2.png' %}" alt="Faça Parte">
+                    <h3>Faça Parte!</h3>
+                    <p>Tem interesse em nossa iniciativa? Venha fazer parte!</p>
                     <a href="{% url 'contribuir' %}" class="btn-card">Contribuir</a>
                 </div>
                 <div class="card">
-                    <img src="{% static 'fotos/solid_light_green.png' %}" alt="Contato">
-                    <h3>Fale Conosco</h3>
-                    <p>Dúvidas, parcerias ou sugestões? Fale com a gente!</p>
+                    <img src="{% static 'fotos/card3.png' %}" alt="Fale Conosco">
+                    <h3>Fale Conosco!</h3>
+                    <p>Dúvidas, parcerias ou qualquer questão, entre em contato conosco!</p>
                     <a href="{% url 'contato' %}" class="btn-card">Contato</a>
                 </div>
             </div>
@@ -111,7 +271,5 @@
         </div>
         <p class="footer-copy">Política de Privacidade | © 2024 Verides - Criar School. Todos os direitos reservados.</p>
     </footer>
-</body>
-</html>
 </body>
 </html>

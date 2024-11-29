@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verides</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'fotos/logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Início</a></li>
+                <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+                <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="materials-section">
+        <h2>Materiais</h2>
+        <div class="steps-container">
+            <div class="step">
+                <img src="{% static 'fotos/cabide.png' %}" alt="Cabide">
+                <h3>PASSO 1</h3>
+                <p>Reúna o seu equipamento elegível</p>
+                <span>Aceitamos a maioria do material que sejam totalmente funcionais e estejam em boas condições.</span>
+            </div>
+            <div class="step">
+                <img src="{% static 'fotos/lixo.png' %}" alt="Folha no lixo">
+                <h3>PASSO 2</h3>
+                <p>Envie-nos os seus artigos</p>
+                <span>Troque o seu equipamento pelo correio. Basta imprimir a etiqueta de envio.</span>
+            </div>
+            <div class="step">
+                <img src="{% static 'fotos/dinheiro.png' %}" alt="Créditos">
+                <h3>PASSO 3</h3>
+                <p>Obtenha créditos</p>
+                <span>Por cada peça de roupa qualificada, receberá crédito para usar na loja.</span>
+            </div>
+        </div>
+        <a href="{% url 'formulariodoacao' %}" class="donate-button">
+            DOAÇÃO DE MATERIAIS
+        </a>     
+    <div class="contribuir3">
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Verides</h3>
+                <p>Abrindo portas para iniciativas socioambientais no mundo digital.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Início</a></li>
+                    <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
+                    <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                    <li><a href="{% url 'contato' %}">Contato</a></li>
+                    <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <div class="footer-icons">
+                    <i class="bi bi-telephone"></i>
+                    <p>+55 81 99449-8361</p>
+                </div>
+                <div class="footer-icons">
+                    <i class="bi bi-envelope-arrow-up"></i>
+                    <p>daniellefabricadeideias@gmail.com</p>
+                </div>
+                <div class="footer-icons">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">Política de Privacidade | © 2024 Verides - Criar School. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+</body>
+</html>
