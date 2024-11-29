@@ -4,40 +4,90 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Doações</title>
+    <title>Verides</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="logo">
-        <img src="{% static 'fotos\logo.png' %}" alt="Logo">
+            <img src="{% static 'fotos/logo.png' %}" alt="Logo da Verides">
         </div>
         <nav>
             <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'sobrenos' %}">Sobre nós</a></li>
+                <li><a href="{% url 'home' %}">Início</a></li>
+                <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
                 <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
-                
+                <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Contribua com Nossa Causa</h1>
-        <p>Sua doação ajuda a manter o projeto em funcionamento.</p>
+
+    <pagamento>
+        <div class="doacao-conteudo">
+            <h1 class="doacao-titulo">Contribua com Nossa Causa</h1>
+            <p class="doacao-texto">Sua doação ajuda a manter o projeto em funcionamento.</p>
+            
+            <a href="https://www.paypal.com/doar?hosted_button_id=SEU_CODIGO" target="_blank">
+                <button class="doacao-botao">Doar via PayPal</button>
+            </a>
+            
+            <h3 class="doacao-subtitulo">Doação via PIX</h3>
+        </div>
         
-        <!-- Botão de Doação com um Link para Pagamentos -->
-        <a href="https://www.paypal.com/doar?hosted_button_id=SEU_CODIGO" target="_blank">
-            <button>Doar via PayPal</button>
-        </a>
-        
-        <!-- Ou adicione outras opções como PIX -->
-        <h3>Doação via PIX</h3>
-        <p>Chave PIX: daniellefabricadeideias@gmail.com</p>
-        </section>
-    </main>
+        <div class="pix-conteudo">
+            <h2 class="pix-title">Pague com</h2>
+            <img src="{% static 'fotos/pix.png' %}" alt="PIX Logo" class="pix-logo">
+            <div class="pix-qrcode">
+                <img src="{% static 'fotos/qrcode.png' %}" alt="QR Code" class="qrcode-image">
+            </div>
+                <div class="qrcode-placeholder"></div>
+            </div>
+            <p class="pix-instructions">Aponte sua câmera para o QR Code<br>ou use nossa Chave:</p>
+            <div class="pix-key">
+                <p class="doacao-chave">Chave PIX: daniellefabricadeideias@gmail.com</p>
+            </div>
+        </div>
+    </pagamento>
+
+    <!-- Rodapé -->
     <footer>
-        <p>redes sociais: fabricas_de_ideias</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Verides</h3>
+                <p>Abrindo portas para iniciativas socioambientais no mundo digital.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Início</a></li>
+                    <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
+                    <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                    <li><a href="{% url 'contato' %}">Contato</a></li>
+                    <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <div class="footer-icons">
+                    <i class="bi bi-telephone"></i>
+                    <p>+55 81 99449-8361</p>
+                </div>
+                <div class="footer-icons">
+                    <i class="bi bi-envelope-arrow-up"></i>
+                    <p>daniellefabricadeideias@gmail.com</p>
+                </div>
+                <div class="footer-icons">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">Política de Privacidade | © 2024 Verides - Criar School. Todos os direitos reservados.</p>
     </footer>
+</body>
+</html>
 </body>
 </html>

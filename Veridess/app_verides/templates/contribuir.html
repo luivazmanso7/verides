@@ -23,20 +23,27 @@
             </ul>
         </nav>
     </header>
-    
     <main>
-        <div class="container">
-            <div class="section">
-                <h2>faça sua doações</h2>
-                <li><a href="{% url 'doacoes' %}">doações</a></li>
+        <div class="contribuir">
+            <h2 class="contribuir-titulo">Qual o tipo de contribuição?</h2>
+            <div class="contribuir-item">
+                <button onclick="location.href='{% url 'doacoes' %}'" class="button">
+                    <img src="{% static 'fotos/dinheiro.png' %}" alt="Financeiro" class="button-image">
+                    <span>Financeiro</span>
+                </button>
             </div>
-            <div class="section">
-                <h2>inscrição</h2>
-                <li><a href="{% url 'inscricao' %}">inscrição</a></li>
+            <div class="contribuir-item">
+                <button onclick="location.href='{% url 'inscricao' %}'" class="button">
+                    <img src="{% static 'fotos/mao.png' %}" alt="Mensagem" class="button-image">
+                    <span>Voluntariar</span>
+                </button>
             </div>
         </div>
+        
+        
     </main>
-
+        <div class="contribuir2">
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-about">
@@ -50,19 +57,18 @@
                     <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
                     <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
                     <li><a href="{% url 'contato' %}">Contato</a></li>
+                    <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
                 </ul>
             </div>
-
-    
             <div class="footer-contact">
                 <h3>Contato</h3>
                 <div class="footer-icons">
                     <i class="bi bi-telephone"></i>
-                    <p>+55 11 9999-9999</p>
+                    <p>+55 81 99449-8361</p>
                 </div>
                 <div class="footer-icons">
                     <i class="bi bi-envelope-arrow-up"></i>
-                    <p>hello@empresa.com.br</p>
+                    <p>daniellefabricadeideias@gmail.com</p>
                 </div>
                 <div class="footer-icons">
                     <i class="bi bi-facebook"></i>

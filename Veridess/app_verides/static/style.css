@@ -1,549 +1,9 @@
-
 /* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;700&display=swap');
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #202a25;
-    color: #ffffff;
-}
 
-/* ===========================================
-   HEADER (Comum a todas as páginas)
-   =========================================== */
-header {
-    background-color: #000000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-
-header .logo img {
-    width: 120px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: 2px solid transparent;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #1abc9c;
-    border-color: #16a085;
-    border-radius: 5px;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    padding: 20px 40px;
-}
-
-.header-container .icon-right img {
-    width: 40px;
-}
-
-/* ===========================================
-   HOME PAGE
-   =========================================== */
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.hero-logo {
-    width: 200px;
-}
-
-/* Projeto Section */
-.projeto {
-    background-color: #203a30;
-    padding: 40px;
-    text-align: center;
-}
-
-.projeto-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.projeto-img {
-    width: 300px;
-    border-radius: 10px;
-}
-
-.projeto-text {
-    max-width: 600px;
-}
-
-.projeto-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-/* Cards Section */
-.product-list {
-    padding: 40px;
-    background-color: #ffffff;
-}
-
-.product-list h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333333;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-}
-
-.product-card {
-    background-color: #f9f9f9; /* Cartões com fundo claro */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
-    max-width: 80%; /* Ajuste do tamanho das imagens */
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.product-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333333;
-}
-
-.product-card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #555555;
-}
-
-.product-card .btn {
-    display: inline-block;
-    background-color: #1abc9c;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.product-card .btn:hover {
-    background-color: #16a085;
-}
-
-/* ===========================================
-   CONTATO PAGE
-   =========================================== */
-/* Contact Section */
-.contact-section {
-    background-color: #203a30;
-    padding: 40px;
-    color: white;
-    text-align: center;
-}
-
-.contact-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.info-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0;
-}
-
-.info-box {
-    text-align: center;
-    padding: 10px;
-    max-width: 200px;
-}
-
-.info-box i {
-    font-size: 2rem;
-    color: #1abc9c;
-    margin-bottom: 10px;
-}
-
-.info-box p {
-    margin: 5px 0;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form label {
-    text-align: left;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-form .btn-submit {
-    background-color: #1abc9c;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form .btn-submit:hover {
-    background-color: #16a085;
-}
-
-/* Map Section */
-.map-section iframe {
-    border: none;
-    margin-top: 20px;
-    width: 100%;
-    height: 400px;
-}
-
-/* ===========================================
-   SOBRE NÓS PAGE
-   =========================================== */
-/* Card Section */
-.card-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 20px;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.card-content h2 {
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: #333;
-}
-
-.card-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Juntos Section */
-.juntos-section {
-    background-color: #1abc9c;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.juntos-section h1 {
-    font-size: 3rem;
-    margin: 20px 0;
-}
-
-.juntos-section p {
-    font-size: 1.2rem;
-}
-
-/* Values Section */
-.values-section {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.values-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.value-box {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-}
-
-.value-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.value-box p {
-    font-size: 1rem;
-}
-
-/* Team Section */
-.team-section {
-    background-color: #203a30;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.team-section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.team-section p {
-    font-size: 1.2rem;
-}
-
-.team-section .btn {
-    display: inline-block;
-    background-color: #1abc9c;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-
-.team-section .btn:hover {
-    background-color: #16a085;
-}
-
-/* ===========================================
-   FOOTER (Comum a todas as páginas)
-   =========================================== */
-footer {
-    background-color: #000;
-    color: white;
-    padding: 20px 40px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #000;
-    color: white;
-}
-
-.footer-container h3 {
-    margin-bottom: 10px;
-}
-
-.footer-about p, .footer-menu ul, .footer-contact p {
-    font-size: 0.9rem;
-}
-
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-menu ul li {
-    margin: 5px 0;
-}
-
-.footer-menu ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-}
-
-.footer-menu ul li a:hover {
-    color: #1abc9c;
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-}
-
-.footer-copy {
-    text-align: center;
-    font-size: 0.8rem;
-    margin-top: 20px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-}
-/* ===========================================
-   Inscrição
-   =========================================== */
-.inscricao-section {
-    padding: 50px 20px; 
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.inscricao-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: white;
-    background-color: #203a30;
-    padding: 10px 0;
-}
-
-.inscricao-section p {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    color: white;
-}
-
-.header-separator {
-    border: 0;
-    height: 1px;
-    background-color: #ccc; 
-    margin: 10px 0;
-}
-
-.form-container {
-    background-color: #203a30;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form label {
-    text-align: left;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-form .btn-submit {
-    background-color: #1abc9c; 
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form .btn-submit:hover {
-    background-color: #16a085;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background-color: #000000;
-    color: white;
-}
-
-.footer-icons a {
-    color: white;
-    margin-right: 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.footer-icons a:hover {
-    color: #1abc9c; 
-}
-
-.footer-copy {
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    border-top: 1px solid #444; 
-}
-
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -704,7 +164,7 @@ nav a:hover {
    =========================================== */
 /* Contact Section */
 .contact-section {
-    background-color: #203a30;
+    background-color:#2d3d35 ;
     padding: 40px;
     color: white;
     text-align: center;
@@ -859,11 +319,13 @@ form .btn-submit:hover {
 }
 
 .juntos-section h1 {
-    font-size: 3rem;
-    margin: 20px 0;
+    font-size: 5rem;
+    font-family: 'Roboto';
+    margin: 40px 0;
 }
 
 .juntos-section p {
+    font-family: 'Sofia Sans';
     font-size: 1.2rem;
 }
 
@@ -882,10 +344,12 @@ form .btn-submit:hover {
 }
 
 .value-box {
-    background-color: #dd1a1a;
+    background-color:#D9D9D9;
     padding: 20px;
     border-radius: 8px;
     width: 250px;
+    font-family: 'Inria Serif', serif;
+    color: #000000;
 }
 
 .value-box h3 {
@@ -899,7 +363,7 @@ form .btn-submit:hover {
 
 /* Team Section */
 .team-section {
-    background-color: #023108;
+    background-color:#11160D;
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -907,7 +371,7 @@ form .btn-submit:hover {
 
 .team-section h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .team-section p {
@@ -916,23 +380,24 @@ form .btn-submit:hover {
 
 .team-section .btn {
     display: inline-block;
-    background-color: #1abc9c;
+    background-color: #657251;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
 .team-section .btn:hover {
-    background-color: #16a085;
+    background-color: #657251;
 }
 
 /* ===========================================
    FOOTER (Comum a todas as páginas)
    =========================================== */
 footer {
-    background-color: #000;
+    background-color: #000000;
     color: white;
     padding: 20px 40px;
 }
@@ -998,7 +463,7 @@ footer {
    =========================================== */
 .inscricao-section {
     padding: 50px 20px; 
-    background-color: #f9f9f9;
+    background-color: #2d3d35;
     text-align: center;
 }
 
@@ -1008,6 +473,7 @@ footer {
     color: white;
     background-color: #203a30;
     padding: 10px 0;
+    
 }
 
 .inscricao-section p {
@@ -1022,6 +488,7 @@ footer {
     background-color: #ccc; 
     margin: 10px 0;
 }
+
 
 .form-container {
     background-color: #203a30;
@@ -1140,3 +607,388 @@ form .btn-submit:hover {
     border-left: 2px solid #1abc9c;
 }
 
+
+
+
+/* Página principal */
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 40px 0;
+    color: #ffffff;
+    font-family: 'Roboto', 
+}
+
+/* Contêiner geral da seção de contribuição */
+.contribuir {
+    display: flex;
+    flex-direction: column; /* Organiza título e botões verticalmente */
+    align-items: center; /* Centraliza tudo horizontalmente */
+    gap: 20px; /* Espaço entre título e botões */
+    padding: 40px; /* Espaço interno */
+}
+
+/* Título centralizado */
+.contribuir-titulo {
+    font-size: 1.8rem; /* Tamanho do texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #ffffff; /* Cor do texto */
+    font-family: 'Roboto', sans-serif; /* Fonte */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Alinha os itens lado a lado */
+.contribuir-items {
+    display: flex; /* Alinha os itens horizontalmente */
+    flex-direction: row; /* Coloca os itens lado a lado */
+    gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo individual dos itens */
+.contribuir-item {
+    display: flex;
+    justify-content: center; /* Centraliza os botões no contêiner */
+    align-items: center;
+}
+
+/* Botão */
+.button {
+    display: flex;
+    flex-direction: column; /* Empilha imagem e texto verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    width: 140px; /* Largura do botão */
+    height: 140px; /* Altura do botão */
+    background-color: #A4B766; /* Cor de fundo */
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Fonte */
+}
+
+/* Imagem dentro do botão */
+.button img {
+    width: 50px; /* Tamanho da imagem */
+    height: auto; /* Mantém proporção */
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Texto dentro do botão */
+.button span {
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: bold;
+    color: #000; /* Cor do texto */
+}
+
+/* Efeito hover no botão */
+.button:hover {
+    transform: scale(1.05); /* Aumenta levemente o botão */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+/* Contêiner geral da seção */
+.contribuir-container {
+    display: flex;
+    flex-direction: column; /* Empilha o título acima dos botões */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente, se necessário */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaço acima do contêiner */
+}
+
+/* Título acima dos botões */
+.contribuir-titulo {
+    font-size: 1.8rem; /* Tamanho do texto */
+    margin-bottom: 20px; /* Espaço entre o título e os botões */
+    color: #ffffff; /* Cor do texto */
+    font-family: 'Roboto', sans-serif; /* Fonte */
+}
+
+
+.contribuir2 {
+    margin-top: 150px;
+
+    
+}
+
+/*Catalogo de produtos*/
+
+.product-list {
+    padding: 40px;
+    background-color: #202a25;
+    color: #ffffff;
+}
+
+.product-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #2d3d35;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #1abc9c;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-card .preco {
+    font-size: 1.2rem;
+    color: #1abc9c;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-card .descricao {
+    font-size: 0.9rem;
+    color: #d3d3d3;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-card .btn {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-card .btn:hover {
+    background-color: #16a085;
+}
+
+/* Seção de Filtros */
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #2d3d35;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.filter-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.filter-section input, .filter-section select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.filter-section .btn {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-section .btn:hover {
+    background-color: #16a085;
+}
+
+/*--------------------*/
+
+
+
+/* Estilo do título principal */
+.doacao-titulo {
+    font-size: 2rem; /* Tamanho do texto */
+    color: #ffffff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-family: 'Roboto', sans-serif; /* Fonte padrão */
+}
+
+/* Texto explicativo */
+.doacao-texto {
+    font-size: 1.2rem; /* Tamanho do texto */
+    color: #DADADA; /* Texto cinza claro */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px; /* Espaço abaixo do texto */
+}
+
+/* Contêiner para centralizar o botão */
+.doacao-container {
+    text-align: center; /* Centraliza o botão horizontalmente */
+    margin-bottom: 30px; /* Espaço abaixo do botão */
+}
+
+/* Estilo do botão de doação via PayPal */
+.doacao-botao {
+    background-color: #A4B766; /* Verde padrão */
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: bold; /* Negrito no texto */
+    color: #FFFFFF; /* Texto branco */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+.doacao-botao:hover {
+    background-color: #A4B766; /* Verde mais escuro no hover */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Subtítulo para doação via PIX */
+.doacao-subtitulo {
+    font-size: 1.5rem; /* Tamanho do texto */
+    color: #FFFFFF; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Espaço acima do subtítulo */
+    font-family: 'Roboto', sans-serif; /* Fonte padrão */
+}
+
+/* Chave PIX */
+.doacao-chave {
+    font-size: 1.2rem; /* Tamanho do texto */
+    font-weight: bold; /* Negrito no texto */
+    color: #DADADA; /* Texto cinza claro */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Espaço acima do texto */
+}
+
+
+/* Contêiner geral para centralizar a doação e PIX */
+.pagamento {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 20px;
+    gap: 40px; /* Espaço entre as seções */
+}
+
+/* Ajuste do conteúdo de doação */
+.doacao-conteudo {
+    text-align: center;
+    max-width: 600px; /* Limita a largura */
+}
+
+/* Contêiner da seção PIX */
+.pix-conteudo {
+    text-align: center;
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    max-width: 600px; /* Limita a largura */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* Título do PIX */
+.pix-title {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Logo do PIX */
+.pix-logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do contêiner do QR Code */
+.pix-qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto 20px auto; /* Centraliza horizontalmente */
+    background-color: #F0F0F0; /* Fundo cinza claro */
+    border-radius: 8px;
+    border: 2px dashed #CCCCCC; /* Borda tracejada */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+}
+
+.qrcode-placeholder {
+    font-size: 1rem;
+    color: #555555;
+    text-align: center;
+}
+
+/* Instruções PIX */
+.pix-instructions {
+    font-size: 1,5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Chave PIX destacada */
+.pix-key {
+    display: inline-block;
+    background-color: #A4B766;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo da imagem do QR Code */
+.qrcode-image {
+    width: 100%; /* Ajusta a largura para ocupar todo o contêiner */
+    height: 100%; /* Ajusta a altura para ocupar todo o contêiner */
+    object-fit: cover; /* Garante que a imagem se ajuste proporcionalmente */
+}
