@@ -32,7 +32,9 @@ jobs:
 
       - name: Cleaning testing files
         run: |
+          cd Veridess
           rm .env
+          cd ..
           
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
