@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Veridess.app_verides',
+    'app_verides',
     "whitenoise.runserver_nostatic",
 ]
 
@@ -72,7 +72,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Veridess.verides.urls'
+ROOT_URLCONF = 'verides.urls'
 
 
 TEMPLATES = [
@@ -91,7 +91,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Veridess.verides.wsgi.application'
+WSGI_APPLICATION = 'verides.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

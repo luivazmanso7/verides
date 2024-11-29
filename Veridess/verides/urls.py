@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Veridess.app_verides import views
+from app_verides import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Veridess.app_verides.urls')),
+    path('', include('app_verides.urls')),
     path('inscricao/', views.inscricao, name='inscricao'),
 ]
 
