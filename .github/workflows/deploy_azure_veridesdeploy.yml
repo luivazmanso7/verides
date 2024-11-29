@@ -1,14 +1,11 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
-
-name: Build and deploy Python app to Azure Web App - Veridesdeploy
+name: Build and deploy Python app to Azure Web App - Verides
 
 on:
   push:
     branches:
-      - Deploy_Azure
+      - main
   workflow_dispatch:
+  
 
 jobs:
   build:
@@ -28,12 +25,25 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r Veridess/requirements.txt
+          pip install psycopg2
+
+      - name: Cleaning testing files
+        run: |
+          cd Veridess/
+          rm -f db.sqlite3
+          rm .env
+          cd ..
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: |
+          cd Veridess/
+          zip release.zip ./* -r
+          cd ..
+          mv Veridess/release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
@@ -61,18 +71,16 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0F9742DDF4604E65A674D92EDDB4F8D1 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9991A9DAB2E3410EB1E5110D7CC0536F }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BA041D8E9E534F6D9C2A26913EFEBFA9 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_BCB0DF3818E742F2B48CB96882F17CDB }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B0E2D07E37364B8B9A7F1CEA64C4C971 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9CC5CEC8742E4115869235D401767FD0 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'Veridesdeploy'
+          app-name: 'Verides'
           slot-name: 'Production'
-          
