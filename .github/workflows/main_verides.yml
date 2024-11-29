@@ -25,7 +25,9 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r Veridess/requirements.txt
+        run: |
+          pip install -r Veridess/requirements.txt
+          pip install psycopg2
 
       - name: Cleaning testing files
         run: |
