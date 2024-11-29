@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verides</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'fotos/logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Início</a></li>
+                <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+                <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Quem Somos Section -->
+        <section class="card-section">
+            <div class="card card-left">
+                <img src="{% static 'fotos/Danielle.jpg' %}" alt="Foto de Danielle">
+                <div class="card-content">
+                    <h4>Brinquedos MangueTown</h4>
+                    <h2>Quem Somos</h2>
+                    <p>
+                        Somos uma organização sem fins lucrativos comprometida em promover mudanças positivas e sustentáveis na nossa comunidade. Nossa equipe é formada por profissionais e voluntários dedicados a criar um impacto social, unindo esforços para apoiar causas sociais e ajudar aqueles que mais precisam.
+                    </p>
+                </div>
+            </div>
+            <div class="card card-right">
+                <img src="{% static 'fotos/funcionarios.png' %}" alt="Foto de Funcionários">
+                <div class="card-content">
+                    <h4>Abrindo Fronteiras</h4>
+                    <h2>Nossa Missão</h2>
+                    <p>
+                        Nossa missão é transformar vidas e fortalecer comunidades por meio de projetos que promovem educação, inclusão social e sustentabilidade. Buscamos inspirar pessoas a contribuírem e se engajarem em ações que promovam um futuro mais justo e igualitário.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Juntos Section -->
+        <section class="juntos-section">
+            <h1>JUNTOS</h1>
+            <p>Sonhamos com um mundo onde cada pessoa tenha acesso a oportunidades e direitos.</p>
+        </section>
+
+        <!-- O Que Nos Move Section -->
+        <section class="values-section">
+            <h2>O Que Nos Move</h2>
+            <div class="values-container">
+                <div class="value-box">
+                    <h3>Empatia</h3>
+                    <p>A empatia é a base das nossas ações. Colocamos as pessoas como prioridade, ouvindo suas necessidades, entendendo suas histórias e respeitando suas perspectivas. Acreditamos que criar um impacto positivo na sociedade começa com o olhar atento e o cuidado genuíno por cada indivíduo, garantindo que todas as vozes sejam ouvidas e consideradas em nossos projetos e iniciativas.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Transparência</h3>
+                    <p>Atuamos com um compromisso inabalável de integridade e responsabilidade em todas as nossas atividades. Mantemos uma comunicação clara e honesta com nossos parceiros, voluntários e beneficiários. Acreditamos que a confiança é essencial para construir relacionamentos duradouros, e por isso garantimos que todas as nossas ações e decisões sejam realizadas de forma ética e acessível.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Sustentabilidade</h3>
+                    <p>Nosso compromisso com a sustentabilidade vai além das ações pontuais; é um princípio que guia todas as nossas decisões. Buscamos implementar práticas que respeitam o meio ambiente, promovem a preservação dos recursos naturais e garantem um futuro melhor para as próximas gerações. Acreditamos que cuidar do planeta é um ato de responsabilidade com a humanidade e com as comunidades que servimos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colaboradores Section -->
+        <section class="team-section">
+            <h2>Faça parte da nossa equipe</h2>
+            <p>Se torne um Colaborador!</p>
+            <a href="{% url 'inscricao' %}" class="btn">Inscreva-se</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Verides</h3>
+                <p>Abrindo portas para iniciativas socioambientais no mundo digital.</p>
+            </div>
+            <div class="footer-menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Início</a></li>
+                    <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
+                    <li><a href="{% url 'contribuir' %}">Contribuir</a></li>
+                    <li><a href="{% url 'contato' %}">Contato</a></li>
+                    <li><a href="{% url 'faq_page' %}">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <div class="footer-icons">
+                    <i class="bi bi-telephone"></i>
+                    <p>+55 81 99449-8361</p>
+                </div>
+                <div class="footer-icons">
+                    <i class="bi bi-envelope-arrow-up"></i>
+                    <p>daniellefabricadeideias@gmail.com</p>
+                </div>
+                <div class="footer-icons">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">Política de Privacidade | © 2024 Verides - Criar School. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+</body>
+</html>
