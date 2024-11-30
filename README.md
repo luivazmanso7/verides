@@ -64,8 +64,7 @@ O Verides foi desenvolvido com as seguintes tecnologias:
       >Link do Prototipo de baixa</a
     > 
  <li>
-     
-<details>
+     <details>
   <summary> Bugtracker </summary>
     
   ![WhatsApp Image 2024-11-30 at 12 15 43](https://github.com/user-attachments/assets/c142e1ed-6f4d-43e7-a8d7-b799222a9456)
