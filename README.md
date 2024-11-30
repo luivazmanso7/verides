@@ -60,8 +60,6 @@ O Verides foi desenvolvido com as seguintes tecnologias:
       >Link do Prototipo de baixa</a
     > 
  <li>
-## Azure
-<li>
     <a  href="veridess.azurewebsites.net"
       >Link do Prototipo de baixa</a
     > 
