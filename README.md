@@ -71,4 +71,5 @@ O Verides foi desenvolvido com as seguintes tecnologias:
   <summary> Bugtracker </summary>
     
   ![WhatsApp Image 2024-11-30 at 12 15 43](https://github.com/user-attachments/assets/c142e1ed-6f4d-43e7-a8d7-b799222a9456)
+![WhatsApp Image 2024-11-30 at 12 15 42 (3)](https://github.com/user-attachments/assets/5ce1a4dd-64e7-4711-8968-b69149f36db7)
 
