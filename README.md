@@ -72,4 +72,8 @@ O Verides foi desenvolvido com as seguintes tecnologias:
     
   ![WhatsApp Image 2024-11-30 at 12 15 43](https://github.com/user-attachments/assets/c142e1ed-6f4d-43e7-a8d7-b799222a9456)
 ![WhatsApp Image 2024-11-30 at 12 15 42 (3)](https://github.com/user-attachments/assets/5ce1a4dd-64e7-4711-8968-b69149f36db7)
-
+![WhatsApp Image 2024-11-30 at 12 15 42 (2)](https://github.com/user-attachments/assets/5ec593db-56ac-4dd7-8c66-e0be1f093aec)
+![WhatsApp Image 2024-11-30 at 12 15 42 (1)](https://github.com/user-attachments/assets/287cf892-391b-4066-8bef-923fd84e20a1)
+![WhatsApp Image 2024-11-30 at 12 15 42](https://github.com/user-attachments/assets/8f83d695-4771-4075-9de5-68ec0c9cd8ba)
+![Whats![WhatsApp Image 2024-11-30 at 12 15 41](https://github.com/user-attachments/assets/ccc2cff4-a09c-4aa2-8009-14392bcadc33)
+App Image 2024-11-30 at 12 15 41 (1)](https://github.com/user-attachments/assets/0dc49314-1b11-428a-82c2-82ee948be3e8)
