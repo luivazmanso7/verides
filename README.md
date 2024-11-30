@@ -62,5 +62,7 @@ O Verides foi desenvolvido com as seguintes tecnologias:
  <li>
 ## Azure
 <li>
-    https://verides-bkfeawbha8bsbxaw.brazilsouth-01.azurewebsites.net/
-</li>
+    <a  href="veridess.azurewebsites.net"
+      >Link do Prototipo de baixa</a
+    > 
+ <li>
