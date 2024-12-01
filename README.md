@@ -64,6 +64,11 @@ O Verides foi desenvolvido com as seguintes tecnologias:
       >Link do Prototipo de baixa</a
     > 
  <li>
+     
+ <li>
+    <a  href="https://youtu.be/3QM_pUxEOkM"
+      >Screencast - (Site funcional)</a 
+    >
      <details>
   <summary> Bugtracker </summary>
     
