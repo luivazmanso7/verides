@@ -66,7 +66,7 @@ O Verides foi desenvolvido com as seguintes tecnologias:
  <li>
      
  <li>
-    <a  href="https://youtu.be/3QM_pUxEOkM"
+    <a  href="https://youtu.be/NBwsC57c_oA"
       >Screencast - (Site funcional)</a 
     >
      <details>
