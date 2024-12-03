@@ -64,6 +64,10 @@ O Verides foi desenvolvido com as seguintes tecnologias:
       >Link do Prototipo de baixa</a
     > 
  <li>
+ <Li>
+    ## Link do site 
+     http://veridess.azurewebsites.net
+ </Li>
      
  <li>
     <a  href="https://youtu.be/JyYVPUW0dx4"
