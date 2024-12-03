@@ -64,4 +64,4 @@ O Verides foi desenvolvido com as seguintes tecnologias:
 <li>
     https:(http://veridess.azurewebsites.net)/
 </li>
-i
+
